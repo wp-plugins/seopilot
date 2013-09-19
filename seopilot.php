@@ -1,13 +1,13 @@
 <?php
 /**
  * @package SeoPilot
- * @version 1.0
+ * @version 1.1
  */
 /*
 Plugin Name: SeoPilot
 Plugin URI: http://www.starla.pl/wtyczka-seopilot-dla-wordpress/
-Description: Plugin do obsługi systemu SeoPilot.pl
-Version: 1.0
+Description: Plugin do wyświetlania reklam systemu SeoPilot.pl
+Version: 1.1
 Author: Radosław Litwin
 Author URI: http://www.starla.pl/
 License: GPLv2 or later

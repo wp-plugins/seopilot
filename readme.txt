@@ -3,18 +3,16 @@ Contributors: radke447
 Tags: seopilot, seopilot.pl
 Requires at least: 3.6
 Tested up to: 3.6.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 Wtyczka umożliwia wyświetlanie reklam systemu seopilot.pl
 
 == Description ==
 
-PL: Wtyczka umożliwia wyświetlanie reklam systemu seopilot.pl przy użyciu widgetów (w przyszłości również shortcode'u i kodu PHP w motywach)
+Wtyczka umożliwia wyświetlanie reklam systemu seopilot.pl przy użyciu widgetów (w przyszłości również shortcode'u i kodu PHP w motywach)
 
-EN: This plugin makes possible to display your seopilot.pl ads using widgets (in future by: shortcodes or PHP code directly in themes).
-
-Funkcjonalność / Major features in SeoPilot 1.0:
+Funkcjonalność / Major features in SeoPilot 1.1:
 
 * Możliwość umieszczania widgetów / Possibility to display ads via widget
 * Możliwość zamieszczenia reklam przy użyciu shortcode: [seopilot is_test=0|1 charset="UTF-8"] (oraz w szablonach poprzez <?php echo do_shortcode('[seopilot is_test=0|1 charset="UTF-8"]'); ?>)
