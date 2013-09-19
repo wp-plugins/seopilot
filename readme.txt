@@ -3,29 +3,39 @@ Contributors: radke447
 Tags: seopilot, seopilot.pl
 Requires at least: 3.6
 Tested up to: 3.6.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
+
+Wtyczka umożliwia wyświetlanie reklam systemu seopilot.pl
 
 == Description ==
 
-PL: Wtyczka umożliwia wyświetlanie reklaml systemu seopilot.pl przy użyciu widgetów (w przyszłości również shortcode'u i kodu PHP w motywach)
-EN: This plugin makes possible to display your seopilot.pl ads using widgets (in future by: shortcodes or PHP code directly in themes).
+Wtyczka umożliwia wyświetlanie reklam systemu seopilot.pl przy użyciu widgetów (w przyszłości również shortcode'u i kodu PHP w motywach)
 
-Major features in SeoPilot 1.0 include:
+Funkcjonalność / Major features in SeoPilot 1.1:
 
-* Possibility to display ads via widget
-* Possibility to change encoding
-* Possibility to turn on/off test mode
+* Możliwość umieszczania widgetów / Possibility to display ads via widget
+* Możliwość zamieszczenia reklam przy użyciu shortcode: [seopilot is_test=0|1 charset="UTF-8"] (oraz w szablonach poprzez <?php echo do_shortcode('[seopilot is_test=0|1 charset="UTF-8"]'); ?>)
+* Możliwość zmiany kodowania / Possibility to change encoding
+* Możliwość włączania i wyłączania trybu testowego / Possibility to turn on/off test mode
 
 == Installation ==
 
-1. Install plugin from WordPress Plugin Respository
-2. After install go to plugin folder and change name of database file so it has your ID in name of file, rest leave as is.
-3. Enable plugin
-5. Go to configuration, put in your ID
-6. Go to widgets and drag&drop where you want your ads to be displayed
+1. Zaintsaluj wtyczkę bezpośrednio w panelu administracyjnym swojego WordPress'a
+2. Po instalacji zmień nazwę pliku bazy linków z "cf9fa261904dfe3b3c5960807693e1c1.links.db" w ten sposób, aby zawierała Twój identyfikator SeoPilot (identyfikator ten znajdziesz na stronie seopilot.pl, musisz być użytkownikiem seopilot.pl)
+3. Zmień uprawnienia dla pliku bazy linków, tak, aby SeoPilot mógł go uaktualniać (np. 777)
+4. Włącz wtyczkę i przejdź do ustawień (po lewej stronie w menu znajdziesz link SeoPilot)
+5. Wpisz swój identyfikator SeoPilot i zapisz
+6. Przejdź do widgetów i umieść widget SeoPilot tak gdzie chcesz
+7. Zrobione.
+
+Jeśli chcesz przetestować wtyczkę to ustaw w jej ustawieniach tryb testowy i na stronie z widget'em wyświetl źródło strony, znajdziesz w nim informacje o stanie rzeczy, również o błędach, jeśli się pojawią.
 
 == Changelog ==
+
+= 1.1 =
+* Aktualizacja readme.txt
+* Dodanie shortcode [seopilot is_test=0|1 charset="UTF-8"]. W plikach motywów można wykorzystać ten shortcode poprzez takie użycie: <?php echo do_shortcode('[seopilot is_test=0|1 charset="UTF-8"]'); ?>
 
 = 1.0 =
 * First version
