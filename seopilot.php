@@ -39,23 +39,6 @@ class SeoPilot {
 		add_menu_page( 'SeoPilot', 'SeoPilot', 'manage_options', 'seopilot-admin-menu', array('SeoPilot', 'SeoPilot_Admin_Options') );
 	}
 
-	public function SeoPilot_Shortcode( $atts ) {
-
-		require_once( plugin_dir_path( __FILE__ ).'/SeoPilotClient.php' );
-
-		extract( shortcode_atts( array(
-			'is_test'	=> get_option('SEOPILOT_TEST') == 1 ? true : false,
-			'charset'	=> get_option('SEOPILOT_CHARSET')?:'UTF-8',
-		), $atts ) );
-
-		$seopilot = new SeoPilotClient( array(
-			'is_test'	=> $is_test,
-			'charset'	=> $charset
-		));
-
-		return $seopilot->build_links();
-	}
-
 	function SeoPilot_Admin_Options() {
 
 		if ( !current_user_can( 'manage_options' ) )  {
@@ -111,15 +94,11 @@ if (!defined('SEOPILOT_USER')) {
 	define('SEOPILOT_USER', get_option('SEOPILOT_USER') );
 }
 
-// Widget
 require_once( plugin_dir_path( __FILE__ ) . 'inc/widgets.php');
 
 add_action( 'widgets_init', function(){
 	register_widget( 'SeoPilot_Widget' );
 });
-
-// Shortcode
-add_shortcode( 'seopilot', array('SeoPilot', 'SeoPilot_Shortcode') );
 
 // Administracyjne tematy (panel administracyjny WP)
 add_action( 'admin_menu', array( 'SeoPilot', 'SeoPilot_Admin_Menu' ) );
